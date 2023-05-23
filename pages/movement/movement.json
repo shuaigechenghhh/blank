@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "task-model": "./components/taskModel/taskModel"
+  },
+  "styleIsolation": "apply-shared"
+}

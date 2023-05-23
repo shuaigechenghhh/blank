@@ -1,0 +1,10 @@
+<view class="model-notice" a:if="{{isShow}}">
+  <view class="image-box">
+      <image src="./image/2023522930.png" class="notice-image"></image>
+      <view class="content-box">
+          <view class="title-box">恭喜获得{{cion}}个租币！</view>
+          <view class="notice-box">任务完成</view>
+      </view>
+  </view>
+  <view class="notice-cion">+{{ cion }}</view>
+</view>

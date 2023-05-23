@@ -1,0 +1,40 @@
+<view class="notice-mian">
+  <view class="notice-title">
+      <view class="title-item" a:for="{{titleList}}"  class="{{index === 0 ? '' : 'margin-two'}}"
+      onTap="handleTabSwitch" data-index={{index}}>
+          <view class="{{index === currentTitle ? 'title-active' : 'title'}}">{{ item.title }}</view>
+          <view class="line-culme" a:if="{{index === currentTitle}}"></view>
+          <image src="./image/2023522dian.png" class="point-box" a:if="{{item.hasNotice}}"></image>
+      </view>
+  </view>
+  <view class="notice-control-box">
+      <view class="control-btn" onTap="handleDetele">
+          <image class="btn-image" src="./image/2023522detele.png"></image>
+          <view class="btn-text">删除已读</view>
+      </view>
+      <view class="line"></view>
+      <view class="control-btn" onTap="handleNotice">
+          <image class="btn-image" src="./image/2023522feng.png"></image>
+          <view class="btn-text">一键已读</view>
+      </view>
+  </view>
+  <view class="notice-list-box">
+      <!-- <z-paging ref="paging" v-model="noticeList" @query="queryList" :fixed="false" default-page-size='5' :auto="false"> -->
+          <view class="notice-item" a:for="{{noticeList}}"  onTap="handleDetail">
+              <view class="item-title-box">
+                  <view class="image-box">
+                      <image src="./image/2023522dian.png" class="icon-point" a:if="{{item.hasRead}}"></image>
+                      <image class="icon-box" src="./image/2023522notice.png" a:if="{{currentTitle === 0}}"></image>
+                      <image class="icon-box" src="./image/2023522xiaox.png" a:if="{{currentTitle === 1}}"></image>
+                      <view class="title">{{ item.title }}</view>
+                  </view>
+                  <view class="tiem">{{ item.time }}</view>
+              </view>
+              <view class="notice-content">{{ item.content }}</view>
+          </view>
+      <!-- </z-paging> -->
+
+  </view>
+  <model-notice isShow="{{hasNotice}}" cion="{{cion}}"></model-notice>
+  <detail-model isShow="{{hasDetail}}"><detail-model>
+</view>

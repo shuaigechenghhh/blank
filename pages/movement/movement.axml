@@ -1,0 +1,116 @@
+<view>
+  <view class="movement-main">
+    <view class="movement-headers">
+        <image src="./image/bg@2x.png" mode="widthFix" class="headers-bg"></image>
+        <view class="movement-box">
+            <view class="box-clmue">
+                <image src="./image/bz13@2x.png" class="box-image" onTap="hangleToNotice"></image>
+                <view class="right-box">
+                    <image src="./image/bj3@2x(1).png" class="box-image-right"></image>
+                    <text class="box-text">32</text>
+                </view>
+            </view>
+            <view class="box-clmue margin-box">
+                <image src="./image/bz13bf@2x.png" class="box-image"></image>
+                <view class="right-box">
+                    <image src="./image/bj3@2x.png" class="box-image-right"></image>
+                    <text class="box-text-two">已签到</text>
+                </view>
+            </view>
+            <view class="bubble-list">
+                <view class="bubble-box fisrt">
+                    <text class="bubble-text">支付成功</text>
+                    <image src="./image/bz4bf6@2x(2).png" class="bubble-bg"></image>
+                </view>
+                <view class="bubble-box">
+                    <text class="bubble-text">运动步数</text>
+                    <image src="./image/bz4bf6@2x(2).png" class="bubble-bg"></image>
+                </view>
+                <view class="bubble-box center">
+                    <text class="bubble-text">支付成功</text>
+                    <image src="./image/bz4bf6@2x(2).png" class="bubble-bg"></image>
+                </view>
+                <view class="bubble-box">
+                    <text class="bubble-text">运动步数</text>
+                    <image src="./image/bz4bf6@2x(2).png" class="bubble-bg"></image>
+                </view>
+                <view class="bubble-box last">
+                    <text class="bubble-text">支付成功</text>
+                    <image src="./image/bz4bf6@2x(2).png" class="bubble-bg"></image>
+                </view>
+            </view>
+            <view class="bubble-main">
+                <view class="bubble-text">
+                    <view class="today-text">今日步数</view>
+                    <view class="movement-num">2748</view>
+                    <view class="movement-text">每日24:00自动清零</view>
+                </view>
+                <image src="./image/boy@2x.png" class="boy"></image>
+                <image src="./image/girl@2x.png" class="girl"></image>
+                <view class="bubble-btn">
+                    瓜分999现金
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="movement-center">
+        <view class="line"></view>
+        <view class="center-title">租币当钱花</view>
+        <view class="center-list">
+            <image class="list-item" src="./image/pic_shop@2x.png" onTap="hangleShop"></image>
+            <image class="list-item margin-left" src="./image/pic_task@2x.png" onTap="handleShow"></image>
+            <image class="list-item margin-left" src="./image/pic_cash@2x.png"></image>
+        </view>
+    </view>
+    <view class="movement-shop">
+        <view class="center-title">租物推荐</view>
+        <view class="shop-list">
+            <view class="shop-card">
+                <image class="card-item" src="./image/Bitmap@2x(1).png" mode="widthFix"></image>
+                <view class="card-title">顶配 iPhone Xs 256…</view>
+                <view class="card-tag">免押金</view>
+                <view class="card-pirce">
+                    <view class="price">￥6.66/天</view>
+                    <view class="today">30天起租</view>
+                </view>
+            </view>
+            <view class="shop-card margin-left-xl">
+                <image class="card-item" src="./image/Bitmap@2x(1).png" mode="widthFix"></image>
+                <view class="card-title">顶配 iPhone Xs 256…</view>
+                <view class="card-tag">免押金</view>
+                <view class="card-pirce">
+                    <view class="price">￥6.66/天</view>
+                    <view class="today">30天起租</view>
+                </view>
+            </view>
+            <view class="shop-card margin-top">
+                <image class="card-item" src="./image/Bitmap@2x(1).png" mode="widthFix"></image>
+                <view class="card-title">顶配 iPhone Xs 256…</view>
+                <view class="card-tag">免押金</view>
+                <view class="card-pirce">
+                    <view class="price">￥6.66/天</view>
+                    <view class="today">30天起租</view>
+                </view>
+            </view>
+
+            <view class="shop-card margin-top margin-left-xl">
+                <image class="card-item" src="./image/Bitmap@2x(1).png" mode="widthFix"></image>
+                <view class="card-title">顶配 iPhone Xs 256…</view>
+                <view class="card-tag">免押金</view>
+                <view class="card-pirce">
+                    <view class="price">￥6.66/天</view>
+                    <view class="today">30天起租</view>
+                </view>
+            </view>
+
+        </view>
+        <view class="more-block">
+            <view class="more-btn">
+                <text>查看更多</text>
+                <image src="./image/DisclosureIndicator@2x.png" class="icon"></image>
+            </view>
+        </view>
+    </view>
+    <task-model isShow="{{isShow}}" onclose="onclose"></task-model>
+</view>
+</view>

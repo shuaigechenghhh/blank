@@ -1,0 +1,19 @@
+{
+  "modes": [
+    {
+      "title": "pages/movement/movement",
+      "page": "pages/movement/movement",
+      "pageQuery": ""
+    },
+    {
+      "title": "pages/noticeList/noticeList",
+      "page": "pages/noticeList/noticeList",
+      "pageQuery": ""
+    },
+    {
+      "title": "pages/shop/shop",
+      "page": "pages/shop/shop",
+      "pageQuery": ""
+    }
+  ]
+}

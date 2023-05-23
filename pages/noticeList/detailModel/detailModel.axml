@@ -1,0 +1,12 @@
+<view class="detail-main" a:if="{{isShow}}">
+  <view class="detail-content">
+      <view class="title">活动通知</view>
+      <view class="content margin-top">恭喜获得20个租币，请查收。为了感谢其长久以来的陪伴，这里的文字请忽略。活动期间每天 11 点还会上线限量礼包，数量有限先到先得，用户们千万不要错过！ </view>
+      <view class="title margin-top">小标题</view>
+      <view class="content margin-top">此外，对于所有有贡献的用户。</view>
+  </view>
+  <view class="detail-btn-block">
+          <view class="detele-btn" onTap="handleDetail">删除</view>
+          <view class="comfirm-btn" onTap="handleDetail">确认</view>
+      </view>
+</view>

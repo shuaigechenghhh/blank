@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "model-notice":"./modelnotice/modelnotice",
+    "detail-model":"./detailModel/detailModel"
+  },
+  "styleIsolation": "apply-shared"
+}

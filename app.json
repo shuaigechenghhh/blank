@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/movement/movement",
+    "pages/noticeList/noticeList",
+    "pages/shop/shop"
+  ],
+  "window": {
+    "defaultTitle": "运动步数"
+  },
+  "behavior": {
+    "requestReferrerStrategy": "page"
+  }
+}
