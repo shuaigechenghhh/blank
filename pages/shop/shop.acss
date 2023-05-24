@@ -90,7 +90,9 @@
   align-items: center;
   position: absolute;
   top: 255rpx;
-
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 .item {
   width: 268rpx;
