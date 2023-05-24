@@ -53,7 +53,8 @@
             </view>
         </view>
     </view>
-    <view class="movement-center">
+    <view class="movement-center-content">
+      <view class="movement-center">
         <view class="line"></view>
         <view class="center-title">租币当钱花</view>
         <view class="center-list">
@@ -63,53 +64,54 @@
         </view>
     </view>
     <view class="movement-shop">
-        <view class="center-title">租物推荐</view>
-        <view class="shop-list">
-            <view class="shop-card">
-                <image class="card-item" src="./image/Bitmap@2x(1).png" mode="widthFix"></image>
-                <view class="card-title">顶配 iPhone Xs 256…</view>
-                <view class="card-tag">免押金</view>
-                <view class="card-pirce">
-                    <view class="price">￥6.66/天</view>
-                    <view class="today">30天起租</view>
-                </view>
-            </view>
-            <view class="shop-card margin-left-xl">
-                <image class="card-item" src="./image/Bitmap@2x(1).png" mode="widthFix"></image>
-                <view class="card-title">顶配 iPhone Xs 256…</view>
-                <view class="card-tag">免押金</view>
-                <view class="card-pirce">
-                    <view class="price">￥6.66/天</view>
-                    <view class="today">30天起租</view>
-                </view>
-            </view>
-            <view class="shop-card margin-top">
-                <image class="card-item" src="./image/Bitmap@2x(1).png" mode="widthFix"></image>
-                <view class="card-title">顶配 iPhone Xs 256…</view>
-                <view class="card-tag">免押金</view>
-                <view class="card-pirce">
-                    <view class="price">￥6.66/天</view>
-                    <view class="today">30天起租</view>
-                </view>
-            </view>
+      <view class="center-title">租物推荐</view>
+      <view class="shop-list">
+          <view class="shop-card">
+              <image class="card-item" src="./image/Bitmap@2x(1).png" mode="widthFix"></image>
+              <view class="card-title">顶配 iPhone Xs 256…</view>
+              <view class="card-tag">免押金</view>
+              <view class="card-pirce">
+                  <view class="price">￥6.66/天</view>
+                  <view class="today">30天起租</view>
+              </view>
+          </view>
+          <view class="shop-card margin-left-xl">
+              <image class="card-item" src="./image/Bitmap@2x(1).png" mode="widthFix"></image>
+              <view class="card-title">顶配 iPhone Xs 256…</view>
+              <view class="card-tag">免押金</view>
+              <view class="card-pirce">
+                  <view class="price">￥6.66/天</view>
+                  <view class="today">30天起租</view>
+              </view>
+          </view>
+          <view class="shop-card margin-top">
+              <image class="card-item" src="./image/Bitmap@2x(1).png" mode="widthFix"></image>
+              <view class="card-title">顶配 iPhone Xs 256…</view>
+              <view class="card-tag">免押金</view>
+              <view class="card-pirce">
+                  <view class="price">￥6.66/天</view>
+                  <view class="today">30天起租</view>
+              </view>
+          </view>
 
-            <view class="shop-card margin-top margin-left-xl">
-                <image class="card-item" src="./image/Bitmap@2x(1).png" mode="widthFix"></image>
-                <view class="card-title">顶配 iPhone Xs 256…</view>
-                <view class="card-tag">免押金</view>
-                <view class="card-pirce">
-                    <view class="price">￥6.66/天</view>
-                    <view class="today">30天起租</view>
-                </view>
-            </view>
+          <view class="shop-card margin-top margin-left-xl">
+              <image class="card-item" src="./image/Bitmap@2x(1).png" mode="widthFix"></image>
+              <view class="card-title">顶配 iPhone Xs 256…</view>
+              <view class="card-tag">免押金</view>
+              <view class="card-pirce">
+                  <view class="price">￥6.66/天</view>
+                  <view class="today">30天起租</view>
+              </view>
+          </view>
 
-        </view>
-        <view class="more-block">
-            <view class="more-btn">
-                <text>查看更多</text>
-                <image src="./image/DisclosureIndicator@2x.png" class="icon"></image>
-            </view>
-        </view>
+      </view>
+      <view class="more-block">
+          <view class="more-btn">
+              <text>查看更多</text>
+              <image src="./image/DisclosureIndicator@2x.png" class="icon"></image>
+          </view>
+      </view>
+  </view>
     </view>
     <task-model isShow="{{isShow}}" onclose="onclose"></task-model>
 </view>

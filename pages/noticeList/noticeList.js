@@ -36,6 +36,9 @@ Page({
 
   },
   onLoad() {},
+  onReachBottom(){
+    console.log('到底了')
+  },
   handleTabSwitch(e){
     console.log(222,e)
     let index =e.target.dataset.index
