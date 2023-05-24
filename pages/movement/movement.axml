@@ -18,24 +18,8 @@
                 </view>
             </view>
             <view class="bubble-list">
-                <view class="bubble-box fisrt">
-                    <text class="bubble-text">支付成功</text>
-                    <image src="./image/bz4bf6@2x(2).png" class="bubble-bg"></image>
-                </view>
-                <view class="bubble-box">
-                    <text class="bubble-text">运动步数</text>
-                    <image src="./image/bz4bf6@2x(2).png" class="bubble-bg"></image>
-                </view>
-                <view class="bubble-box center">
-                    <text class="bubble-text">支付成功</text>
-                    <image src="./image/bz4bf6@2x(2).png" class="bubble-bg"></image>
-                </view>
-                <view class="bubble-box">
-                    <text class="bubble-text">运动步数</text>
-                    <image src="./image/bz4bf6@2x(2).png" class="bubble-bg"></image>
-                </view>
-                <view class="bubble-box last">
-                    <text class="bubble-text">支付成功</text>
+                <view class="bubble-box {{ item.position}} {{!item.received?'':'received'}}" a:for="{{bubbleList}}" onTap="handleBubble" data-index={{index}}>
+                    <text class="bubble-text">{{item.text}}</text>
                     <image src="./image/bz4bf6@2x(2).png" class="bubble-bg"></image>
                 </view>
             </view>
@@ -47,9 +31,10 @@
                 </view>
                 <image src="./image/boy@2x.png" class="boy"></image>
                 <image src="./image/girl@2x.png" class="girl"></image>
-                <view class="bubble-btn">
-                    瓜分999现金
-                </view>
+                
+            </view>
+              <view class="bubble-btn">
+                瓜分999现金
             </view>
         </view>
     </view>

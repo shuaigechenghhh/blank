@@ -1,5 +1,6 @@
 <view class="notice-mian">
-  <view class="notice-title">
+  <view class="fixed-box">
+    <view class="notice-title">
       <view class="title-item" a:for="{{titleList}}"  class="{{index === 0 ? '' : 'margin-two'}}"
       onTap="handleTabSwitch" data-index={{index}}>
           <view class="{{index === currentTitle ? 'title-active' : 'title'}}">{{ item.title }}</view>
@@ -18,22 +19,27 @@
           <view class="btn-text">一键已读</view>
       </view>
   </view>
+  </view>
   <view class="notice-list-box">
-      <!-- <z-paging ref="paging" v-model="noticeList" @query="queryList" :fixed="false" default-page-size='5' :auto="false"> -->
-          <view class="notice-item" a:for="{{noticeList}}"  onTap="handleDetail">
-              <view class="item-title-box">
-                  <view class="image-box">
-                      <image src="./image/2023522dian.png" class="icon-point" a:if="{{item.hasRead}}"></image>
-                      <image class="icon-box" src="./image/2023522notice.png" a:if="{{currentTitle === 0}}"></image>
-                      <image class="icon-box" src="./image/2023522xiaox.png" a:if="{{currentTitle === 1}}"></image>
-                      <view class="title">{{ item.title }}</view>
-                  </view>
-                  <view class="tiem">{{ item.time }}</view>
-              </view>
-              <view class="notice-content">{{ item.content }}</view>
-          </view>
-      <!-- </z-paging> -->
-
+    <view class="list-box" a:if="{{noticeList.length}}">
+      <view class="notice-item" a:for="{{noticeList}}"  onTap="handleDetail">
+        <view class="item-title-box">
+            <view class="image-box">
+                <image src="./image/2023522dian.png" class="icon-point" a:if="{{item.hasRead}}"></image>
+                <image class="icon-box" src="./image/2023522notice.png" a:if="{{currentTitle === 0}}"></image>
+                <image class="icon-box" src="./image/2023522xiaox.png" a:if="{{currentTitle === 1}}"></image>
+                <view class="title">{{ item.title }}</view>
+            </view>
+            <view class="tiem">{{ item.time }}</view>
+        </view>
+        <view class="notice-content">{{ item.content }}</view>
+    </view>
+    <view class="bottom-text" a:if="{{hasBottomText}}">{{bottomText}}</view>
+    </view>
+    <view class='none-data' a:if="{{!noticeList.length}}">
+      <image class='none-data-image' src="./image/2023524942.png"></image>
+      <view class='none-text'>暂无消息</view>
+    </view>
   </view>
   <model-notice isShow="{{hasNotice}}" cion="{{cion}}"></model-notice>
   <detail-model isShow="{{hasDetail}}"><detail-model>

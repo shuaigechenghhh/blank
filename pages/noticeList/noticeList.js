@@ -1,52 +1,69 @@
 Page({
   data: {
-    titleList:[{
+    titleList: [{
       title: '活动公告',
       hasNotice: true
-  }, {
+    }, {
       title: '订单消息',
       hasNotice: false
-  }],
-    currentTitle:0,
-    noticeList:[ {
+    }],
+    currentTitle: 0,
+    noticeList: [],
+    hasNotice: false,
+    hasDetail: false,
+    cion: "20",
+    bottomText:'没有更多了',
+    hasPaging:false,
+    hasBottomText:false
+  },
+  onLoad() {
+    this.init()
+  },
+  onReachBottom() {
+    let hasPaging=this.data.hasPaging
+    if(hasPaging){
+      this.setData({
+        bottomText:'加载中...',
+        hasBottomText:true
+      })
+      console.log('到底了')
+      this.getList()
+    }else{
+      this.setData({
+        hasBottomText:true
+      })
+    }
+  },
+  init() {
+   this.getList()
+  },
+  getList(){
+    const len = 10
+    const newList = this.data.noticeList
+    const item = {
       title: '活动通知',
       time: '2020-03-23 14:30',
       hasRead: false,
       content: '恭喜获得20个租币，请查收',
       coin: '20'
-  },
-  {
-      title: '活动通知',
-      time: '2020-03-23 14:30',
-      hasRead: true,
-      content: '恭喜获得20个租币，请查收',
-      coin: '20'
-  },
-  {
-      title: '活动通知',
-      time: '2020-03-23 14:30',
-      hasRead: false,
-      content: '恭喜获得20个租币，请查收',
-      coin: '20'
-  },],
-  hasNotice:false,
-  hasDetail:false,
-  cion:"20"
-
-
-  },
-  onLoad() {},
-  onReachBottom(){
-    console.log('到底了')
-  },
-  handleTabSwitch(e){
-    console.log(222,e)
-    let index =e.target.dataset.index
+    }
+    for (let i = 0; i < len; i++) {
+      newList.push(item)
+    }
+    setTimeout(()=>{
+      this.setData({
+        noticeList:newList,
+        hasBottomText:false
+      })
+    },1000)
+  } ,
+  handleTabSwitch(e) {
+    let index = e.target.dataset.index
     this.setData({
-      currentTitle:index
+      currentTitle: index
     })
   },
-  handleDetele(){
+  handleDetele() {
     my.confirm({
       title: '是否要删除已读通知',
       confirmButtonText: '确认删除',
@@ -58,26 +75,30 @@ Page({
       },
     });
   },
-  handleNotice(){
-    let newList =this.data.noticeList.map((item)=>({...item,hasRead:false}))
+  handleNotice() {
+    let newList = this.data.noticeList.map((item) => ({
+      ...item,
+      hasRead: false
+    }))
     this.setData({
-      hasNotice:true,
-      noticeList:newList
+      hasNotice: true,
+      noticeList: newList
     })
-    setTimeout(()=>{
+    setTimeout(() => {
       this.setData({
-        hasNotice:false
+        hasNotice: false
       })
-    },1000)
+    }, 1000)
   },
-  handleDetail(){
+  handleDetail() {
     this.setData({
-      hasDetail:true
+      hasDetail: true
     })
   },
-  closeDetailModel(){
+  closeDetailModel() {
     this.setData({
-      hasDetail:false
+      hasDetail: false
     })
-  }
+  },
+
 });

@@ -9,7 +9,6 @@
   position: fixed;
   top: 0rpx;
 }
-
 .movement-box {
   position: absolute;
   top: 0;
@@ -115,10 +114,10 @@
   position: absolute;
   top: 390rpx;
   left: 50%;
-  transform: translate(-220rpx);
-  width: 440rpx;
-  height: 440rpx;
-  border-radius: 330rpx 330rpx 0 0;
+  transform: translate(-165rpx);
+  width: 330rpx;
+  height: 330rpx;
+  border-radius: 330rpx 330rpx 200rpx 200rpx;
   background: linear-gradient(360deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
 }
 
@@ -126,16 +125,16 @@
   position: absolute;
   width: 65rpx;
   height: 124rpx;
-  bottom: 165rpx;
-  left: 20rpx;
+  bottom: 100rpx;
+  left: -10rpx;
 }
 
 .girl {
   position: absolute;
   width: 75rpx;
   height: 106rpx;
-  bottom: 165rpx;
-  right: 0rpx;
+  bottom: 100rpx;
+  right: -30rpx;
 }
 
 .bubble-text {
@@ -155,7 +154,7 @@
 }
 
 .movement-num {
-  font-size: 110rpx;
+  font-size: 80rpx;
   font-family: DINCondensed-Bold, DINCondensed;
   font-weight: bold;
   color: #084F3E;
@@ -167,10 +166,19 @@
   font-weight: 400;
   color: #999999;
 }
-
+.bubble-btn-block{
+  /* width: 100%; */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  position: absolute;
+  bottom: 180rpx;
+}
 .bubble-btn {
   position: absolute;
   bottom: 80rpx;
+  margin-left: 50%;
+  transform: translate(-225rpx);
   width: 450rpx;
   height: 88rpx;
   background: linear-gradient(360deg, #FA5721 0%, #FFA901 100%);
@@ -336,4 +344,7 @@ color: #999999;
   margin-left: 10rpx;
   width: 16rpx;
   height: 26rpx;
+}
+.received{
+  visibility: hidden;
 }

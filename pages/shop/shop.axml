@@ -17,20 +17,20 @@
           </view>
           <image class="cion-go" src="./image/2023522bianjian3.png"></image>
       </view>
-  </view>
-  <view class="shop-center">
-      <view class="item">
-      </view>
-      <view class="item">
-      </view>
-      <view class="item">
-      </view>
-      <view class="item">
-      </view>
+      <view class="shop-center">
+        <view class="item">
+        </view>
+        <view class="item">
+        </view>
+        <view class="item">
+        </view>
+        <view class="item">
+        </view>
+    </view>
   </view>
   <view class="exchange-title">
       <view class="title-block">
-          <view class="title">兑换商店</view>
+          <view class="title-shop">兑换商店</view>
           <image class="icon-big" src="./image/system-help@2x.png"></image>
       </view>
       <view class="record-mian-block">
@@ -39,23 +39,17 @@
       </view>
   </view>
   <view class="tag-list">
-      <view class="tag-item active">全部</view>
-      <view class="tag-item">1-100</view>
-      <view class="tag-item">100-1000</view>
-      <view class="tag-item">1000-10000</view>
+      <view class="{{index===currentIndex?'tag-item active':'tag-item'}}" a:for='{{titleList}}' data-index="{{index}}" onTap="handleClick">{{item}}</view>
   </view>
-  <view class="paging-box">
-      <!-- <z-paging ref="paging" v-model="shopList" @query="queryList" :fixed="false" default-page-size='5'> -->
-          <view class="shop-content-list">
-          <view class="content-card" a:for="{{shopList}}" >
-              <image class="card-image" src="./image/20235221603(2).png"></image>
-              <view class="title">顶配 iPhone Xs 256…</view>
-              <view class="price">200租币 +9.9元</view>
-              <view class="num"><text>16.2元</text><text>已兑2513件</text></view>
-          </view>
-      </view>
-      <!-- </z-paging> -->
-  </view>
+<scroll-view scroll-y="{{true}}" class="shop-content-list" onScrollToLower="onScrollToLower">
+    <view class="content-card" a:for="{{shopList}}" >
+        <image class="card-image" src="./image/20235221603(2).png"></image>
+        <view class="title">顶配 iPhone Xs 256…</view>
+        <view class="price">200租币 +9.9元</view>
+        <view class="num"><text>16.2元</text><text>已兑2513件</text></view>
+    </view>
+    <view class="bottom-text" a:if="{{hasBottomText}}">{{bottomText}}</view>
+</scroll-view>
   <view class="footer">
       <view class="footer-btn">
           <view class="btn-tetx">赚取更多租币</view>
